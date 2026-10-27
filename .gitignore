@@ -1,0 +1,7 @@
+# 本插件是纯 ESM、免构建，不需要安装依赖；这里只是防止误提交
+node_modules/
+
+# 日志与临时文件
+*.log
+.DS_Store
+Thumbs.db

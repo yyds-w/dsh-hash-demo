@@ -1,0 +1,17 @@
+{
+  "name": "dsh-hash-demo",
+  "version": "1.0.0",
+  "description": "Minimal dsh plugin demo: a hash_text tool that computes MD5/SHA1/SHA256/SHA512 via Node crypto. Mirrors the dshmarket plugin shape so it resolves the same @deepseek-ai/* runtime bridge.",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
