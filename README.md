@@ -15,7 +15,7 @@ dsh-hash-demo/
 └── cordis.patch.yml  # 把本插件插进 profile 的 layer 栈
 ```
 
-## 三个核心概念（对应视频）
+## 三个核心概念
 
 - **Plugin（插件）** = 导出 `name` / `inject` / `apply(ctx)` 的 cordis 插件。
   在 `apply` 里通过 `ctx.tools.register(...)` 注册工具；卸载时自动清理。
@@ -87,7 +87,7 @@ python -c "import os,subprocess; t=subprocess.run(['netstat','-ano'],capture_out
 dsh plugin --profile web remove dsh-hash-demo
 ```
 
-## 踩坑提示（来自视频 + 实战）
+## 踩坑提示
 
 - **不需要、也不要 `npm install`**：插件是纯 ESM + 免构建，`@deepseek-ai/*` 走 harness 运行时桥接，
   装依赖是多余动作。npm 7+ 还会自动安装 peerDependencies——一旦里面混进不存在的包名
